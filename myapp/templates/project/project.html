@@ -3,9 +3,12 @@
 {% block content %}
 
 <h1>Project</h1>
-
-{% for projects in project %}
-<h2>{{ projects.name }}</h2>
-{% endfor %}
+<article>
+    {% for projects in project %}
+    <a href="{% url 'project_detail' projects.id %}">
+        <h3 class="card">{{ projects.name }}</h3>
+    </a>
+    {% endfor %}
+</article>
 
 {% endblock %}

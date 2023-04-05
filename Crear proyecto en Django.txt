@@ -1,0 +1,36 @@
+Crear proyecto en Django
+django-admin startporject mysite .
+
+Crear aplicacion
+pyhon manage.py startapp myapp
+
+iniciar
+python manage.py runserver 5000
+
+
+Librerias
+from django.http import HttpResponse, JsonResponse
+
+HttpResponse-> Respuesta
+
+
+from django.urls import path, include
+
+include-> paquete de urls
+
+pyhon manage.py makemigratios ->Ejecutar todas las apps
+pyhon manage.py migrate-> crear tablas en db
+
+Crear tablas models.py
+
+pyhon manage.py shell -> importar modelos
+
+from myapp.models import Project, Task
+p= = Project(name= "Aplicacion Movil")
+p.salve()
+
+from myapp.models import Project, Task
+p= Project.objects.get(id=1)
+p.task_set.create(title="")
+
+Crear administrador python manage.py createsuperuser
